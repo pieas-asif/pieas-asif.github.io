@@ -6,7 +6,6 @@
 
 body {
 	background-color: #eeeff1;
-	/*background-color: red;*/
 	font-family: 'Poppins', sans-serif;
 	display: flex;
 	justify-content: center;
@@ -88,11 +87,30 @@ body {
 	color: #191d21;
 }
 
-.navigation__action {
-	background-color: #1a1c20 !important;
-	color: #ffffff !important;
-	padding: .5rem 1rem !important;
-	border-radius: 8px;
+
+
+@media(min-width: 769px) {
+	.navigation__about::after {
+		content: "about";
+		padding-left: .5rem;
+	}
+
+	.navigation__contact::after {
+		content: "contact";
+		padding-left: .5rem;
+	}
+
+	.navigation__action {
+		background-color: #1a1c20 !important;
+		color: #ffffff !important;
+		padding: .5rem 1rem !important;
+		border-radius: 8px;
+	}
+
+	.navigation__action::after {
+		content: "download cv";
+		padding-left: .5rem;
+	}
 }
 
 @media(max-width: 768px) {
@@ -100,7 +118,26 @@ body {
 		background-color: transparent;
 		flex-direction: column;
 		height: 100%;
-		padding: 1rem 2rem;
+		padding: 0;
+	}
+
+	.navigation__logo {
+		width: 100%;
+		padding: .5rem 1rem;
+		text-align: center;
+		font-size: 2rem;
+		background-color: #eeeff1;
+	}
+
+	.navigation__links {
+		background-color: #eeeff1;
+		width: 100%;
+		justify-content: space-evenly;
+		padding: .5rem 0;
+	}
+
+	.navigation__links > a {
+		font-size: 2rem;
 	}
 
 	.main {
