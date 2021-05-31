@@ -107,7 +107,7 @@ body {
 		padding: 10rem 3rem;
 	}
 
-	/*.main__title {
+	.main__title {
 		font-size: 3rem;
 		line-height: 3rem;
 	}
@@ -118,5 +118,5 @@ body {
 
 	.main__subtitle {
 		font-size: 1.5rem;
-	}*/
+	}
 }
