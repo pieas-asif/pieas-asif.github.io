@@ -86,37 +86,19 @@ body {
 	color: #191d21;
 }
 
-
-
 @media(min-width: 769px) {
-	.navigation__about::after {
-		content: "about";
-		padding-left: .5rem;
-	}
-
-	.navigation__contact::after {
-		content: "contact";
-		padding-left: .5rem;
-	}
-
 	.navigation__action {
 		background-color: #1a1c20 !important;
 		color: #ffffff !important;
 		padding: .5rem 1rem !important;
 		border-radius: 8px;
 	}
-
-	.navigation__action::after {
-		content: "download cv";
-		padding-left: .5rem;
-	}
 }
 
 @media(max-width: 768px) {
 	.navigation {
-		background-color: transparent;
+		background-color: #eeeff1;
 		flex-direction: column;
-		height: 100%;
 		padding: 0;
 	}
 
@@ -136,7 +118,7 @@ body {
 	}
 
 	.navigation__links > a {
-		font-size: 2rem;
+		font-size: 1.15rem;
 	}
 
 	.main {
