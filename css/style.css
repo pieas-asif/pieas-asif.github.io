@@ -111,11 +111,18 @@ body {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 99;
 }
 
 .footer__links > a {
 	font-size: 2rem;
 	text-decoration: none;
+	color: #61646d;
+}
+
+.footer__links > a:hover {
 	color: #191d21;
 }
 
@@ -198,6 +205,11 @@ body {
 		color: #ffffff;
 		border-radius: 4px;
 	}
+
+	.footer__links > a {
+		color: #191d21;
+	}
+
 }
 
 @keyframes picture_animate {
