@@ -8,6 +8,7 @@ body {
 	background-color: #eeeff1;
 	font-family: 'Poppins', sans-serif;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -15,16 +16,6 @@ body {
 .main {	
 	padding: 8rem 20rem 2rem 10rem;
 }
-
-/*.main__img {
-	position: absolute;
-	top: 10%;
-	right: 10%;
-	border-radius: 50%;
-	width: 250px;
-	z-index: 1;
-	animation: picture_animate linear 5s infinite alternate;
-}*/
 
 .main__image {
 	background-image: url("../assets/me.jpg");
@@ -35,10 +26,6 @@ body {
 	border-radius: 50%;
 	z-index: 1;
 }
-
-/*.main__image:hover {
-	filter: saturate(100%) contrast(100%);
-}*/
 
 .main__title {
 	font-size: 4rem;
@@ -78,17 +65,21 @@ body {
 	color: #191d21;
 }
 
+.link:hover {
+	text-decoration: underline;
+}
 
 .navigation__logo {
 	position: fixed;
 	left: 0;
 	top: 0;
-	padding: 1rem 2rem;
-	background-color: #eeeff1;
+	margin: 1rem 2rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: .8rem;
 	z-index: 99;
+	text-decoration: none;
+	color: #000;
 }
 
 .navigation__links {
@@ -131,6 +122,97 @@ body {
 	margin-bottom: -.8rem;
 }
 
+.about {
+	display: flex;
+	flex-direction: row;
+	padding: 10rem;
+	align-items: center;
+}
+
+.about__image {
+	min-width: 200px;
+	min-height: 300px;
+	max-width: 400px;
+	max-height: 600px;
+	background-image: url("../assets/me2.jpg");
+	background-size: cover;
+}
+
+.about__desc {
+	display: flex;
+	padding: 0 2rem;
+	flex-direction: column;
+}
+
+.about__desc__title {
+	font-size: 4.5rem;
+	font-weight: 500;
+	color: #191d21;
+}
+
+.about__desc__text {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.skills {
+	display: flex;
+	flex-direction: row;
+	padding: 0 10rem;
+}
+
+.skills__career {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+}
+
+.skills__career__title {
+	font-size: 3rem;
+	flex-shrink: 0;
+}
+
+.skills__career__text {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+.skills__skillset {
+	padding-left: 1rem;
+	flex: 2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.skill {
+	font-size: 1rem;
+	font-weight: 500;
+	margin: .25rem;
+	padding: 1rem;
+	border: 1px solid black;
+	border-radius: 25px;
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(min-width: 769px) {
 	.navigation__action {
 		background-color: #1a1c20 !important;
@@ -155,6 +237,7 @@ body {
 
 @media(max-width: 768px) {
 	.navigation__logo {
+		margin: 0;
 		width: 100%;
 		padding: .5rem 1rem;
 		text-align: center;
