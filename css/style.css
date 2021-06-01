@@ -107,6 +107,23 @@ body {
 	color: #191d21;
 }
 
+.footer__links {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer__links > a {
+	font-size: 2rem;
+	text-decoration: none;
+	color: #191d21;
+}
+
+
+.footer__links > a:nth-child(1) {
+	margin-bottom: -.8rem;
+}
+
 @media(min-width: 769px) {
 	.navigation__action {
 		background-color: #1a1c20 !important;
