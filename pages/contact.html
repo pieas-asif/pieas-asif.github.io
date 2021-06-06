@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaman Sharif</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Poppins Font - Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <a class="navigation__logo" href="../index.html">SHAMAN</a>
+  <div class="navigation__links">
+    <a href="about.html">about</a>
+    <a href="contact.html">contact</a>
+    <a href="https://raw.githubusercontent.com/pieas-asif/pieas-asif.github.io/master/downloads/Resume%20-%20Shaman%20Sharif.pdf" target="_blank" class="navigation__action">resume</a>
+  </div>
+  <div class="contact" id="app">
+    <div class="contact__title">Want to get in touch?</div>
+    <div class="contact__contact-link"><i class="fas fa-phone-square-alt"></i> Call me at <a href="tel:+8801854504754">+88 018 54 50 47 54</a></div>
+    <div class="contact__contact-link"><i class="fas fa-at"></i> Write me at <a href="mailto:shaman.sharif@outlook.com">shaman.sharif@outlook.com</a></div>
+    <div class="contact__subtitle">Social?</div>
+    <div class="contact__contact-link"><i class="fab fa-whatsapp"></i> WhatsApp: <a href="whatsapp://send?text=Hi&phone=+8801854504754&abid=+8801854504754">+88 018 54 50 47 54</a></div>
+    <div class="contact__contact-link"><i class="fab fa-twitter"></i> Twitter: <a href="https://twitter.com/ShamanSharif/" target="_blank">Shaman Sharif</a></div>
+    <div class="contact__subtitle">Write something anonmously?</div>
+    <div class="contact__textbox"><textarea v-model="msg" placeholder="Write"></textarea></div>
+    <button class="contact__submit" @click="send"><i class="fas fa-paper-plane"></i> Submit</button>
+</div>
+  </div>
+  <div class="footer__links">
+    <a href="https://github.com/pieas-asif" target="_blank"><i class="fab fa-github-alt"></i></a>
+    <a href="https://bitbucket.org/pieas-asif/" target="_blank"><i class="fab fa-bitbucket"></i></a>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBXAcKBhYkubQJeV_HRvv5j8WCR_IaN8Gw",
+      authDomain: "portfolio-shaman.firebaseapp.com",
+      projectId: "portfolio-shaman",
+      storageBucket: "portfolio-shaman.appspot.com",
+      messagingSenderId: "459913092171",
+      appId: "1:459913092171:web:664a5875420f64909f81ce"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    
+  <!-- Vue JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <!-- Web Site Source -->
+  <script>
+    var db = firebase.firestore();
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        msg: '',
+      }, 
+      methods: {
+        send: function() {
+          if (msg != "") {
+            db.collection("messages").add({
+                content: this.msg,
+                read: false,
+                time: firebase.firestore.FieldValue.serverTimestamp()
+            })
+            .then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

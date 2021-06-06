@@ -9,8 +9,10 @@ body {
 	font-family: 'Poppins', sans-serif;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+}
+
+.disabled {
+	pointer-events: none;
 }
 
 .main {	
@@ -206,6 +208,39 @@ body {
 	flex-grow: 0;
 	flex-shrink: 1;
 }
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	padding: 10rem;
+	align-items: flex-start;
+}
+
+.contact__title {
+	font-size: 4.5rem;
+	font-weight: 500;
+	color: #191d21;
+}
+
+.contact__subtitle {
+	font-size: 2.5rem;
+	padding: 1rem 0;
+	font-weight: 400;
+	color: #191d21;
+}
+
+.contact__contact-link {
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: #61646d;
+}
+
+.contact__contact-link a {
+	color: #191d21;
+	font-weight: 400;
+}
+
+
 
 
 
