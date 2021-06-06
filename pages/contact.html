@@ -71,7 +71,7 @@
       }, 
       methods: {
         send: function() {
-          if (msg != "") {
+          if (this.msg != "") {
             db.collection("messages").add({
                 content: this.msg,
                 read: false,
