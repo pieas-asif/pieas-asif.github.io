@@ -15,6 +15,19 @@ body {
 	pointer-events: none;
 }
 
+textarea {
+	border: 2px solid #191d21;
+	padding: 1rem;
+	font-family: inherit;
+	background-color: #eeeff1;
+	color: #191d21;
+	outline: none;
+	resize: none;
+	width: 100%;
+	height: 15rem;
+	overflow: auto;
+}
+
 .main {	
 	padding: 8rem 20rem 2rem 10rem;
 }
@@ -240,7 +253,33 @@ body {
 	font-weight: 400;
 }
 
+.contact__textbox {
+	width: 70%;
+}
 
+.contact__submit {
+	padding: 1rem 0;
+}
+
+.contact__submit-btn {
+	padding: 1rem 2rem;
+	margin: 0;
+	border: 2px solid #191d21;
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: #191d21;
+	cursor: pointer;
+}
+
+.contact__submit-btn-sent {
+	padding: 1rem 2rem;
+	margin: 0;
+	border: 2px solid #191d21;
+	background-color: #191d21;
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: #eeeff1;
+}
 
 
 
@@ -394,6 +433,29 @@ body {
 		font-size: .8rem;
 		margin: .12rem;
 		padding: .25rem .5rem;
+	}
+
+	.contact {
+		padding: 7rem 3rem;
+	}
+
+	.contact__title {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+		padding-bottom: 2rem;
+	}
+
+	.contact__contact-link {
+		font-size: 1rem;
+	}
+
+	.contact__subtitle {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+
+	.contact__textbox {
+		width: 90%;
 	}
  
 }

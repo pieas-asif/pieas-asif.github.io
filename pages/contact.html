@@ -25,9 +25,11 @@
     <div class="contact__subtitle">Social?</div>
     <div class="contact__contact-link"><i class="fab fa-whatsapp"></i> WhatsApp: <a href="whatsapp://send?text=Hi&phone=+8801854504754&abid=+8801854504754">+88 018 54 50 47 54</a></div>
     <div class="contact__contact-link"><i class="fab fa-twitter"></i> Twitter: <a href="https://twitter.com/ShamanSharif/" target="_blank">Shaman Sharif</a></div>
-    <div class="contact__subtitle">Write something anonmously?</div>
-    <div class="contact__textbox"><textarea v-model="msg" placeholder="Write"></textarea></div>
-    <button class="contact__submit" @click="send"><i class="fas fa-paper-plane"></i> Submit</button>
+    <div class="contact__subtitle">Write something anonymously?</div>
+    <div class="contact__textbox"><textarea v-model="msg" placeholder="Write" required></textarea></div>
+    <div class="contact__submit">
+      <button v-bind:class="[isSent ? 'contact__submit-btn-sent' : 'contact__submit-btn' ]" @click="send" type="submit"><i :class="['fas', isSent ? 'fa-check' : 'fa-paper-plane']"></i> {{ button_text }}</button>
+    </div>
 </div>
   </div>
   <div class="footer__links">
@@ -66,12 +68,17 @@
 
     var app = new Vue({
       el: '#app',
-      data: {
-        msg: '',
+      data() {
+        return {
+          msg: '',
+          button_text: 'Submit',
+          isSent: false,
+        }
       }, 
       methods: {
         send: function() {
-          if (this.msg != "") {
+          if (this.msg != "" && !this.isSent) {
+            this.button_text = "Sending..."
             db.collection("messages").add({
                 content: this.msg,
                 read: false,
@@ -79,8 +86,11 @@
             })
             .then((docRef) => {
                 console.log("Document written with ID: ", docRef.id);
+                this.button_text = 'Sent';
+                this.isSent = true;
             })
             .catch((error) => {
+                this.button_text = "Error";
                 console.error("Error adding document: ", error);
             });
           }
