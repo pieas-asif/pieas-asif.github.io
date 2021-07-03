@@ -3,5 +3,7 @@
 % pieas-asif.github.io
 ---
 
-### Hi there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I am Shaman Sharif!
+# Hi There 👋
+
+My name is Shaman Sharif. I love Programming and Creating Beatuful Apps 💕
 
