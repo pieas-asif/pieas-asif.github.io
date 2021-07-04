@@ -33,7 +33,7 @@ textarea {
 }
 
 .main__image {
-	background-image: url("../assets/me.jpg");
+	background-image: url("../assets/circle_me.png");
 	background-size: cover;
 	width: 250px;
 	min-height: 250px;
