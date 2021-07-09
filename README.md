@@ -4,10 +4,10 @@
 
 My name is __Shaman Sharif__. And I love Programming and Creating Beatuful Apps 💕
 
-Currently Lead Full Stack Developer at [Help A Needy Directly](https://helpaneedydirectly.org). Previously Web Developer at [City Transfer and Travel LTD.](https://citytransferandtravelltd.com). 
+Currently Flutter App Developer at [EvidentBD LTD](https://evidentbd.com) Previously Lead Full Stack Developer at [Help A Needy Directly](https://helpaneedydirectly.org) and Web Developer at [City Transfer and Travel LTD.](https://citytransferandtravelltd.com). 
 
 ### Want to get in touch? 
-[![LinkedIn Badge](https://img.shields.io/static/v1?label=@ShamanSharif&logo=linkedin&message=Follow&color=0077b5)](https://www.linkedin.com/in/shamansharif/) [![Twitter Badge](https://img.shields.io/static/v1?label=@ShamanSharif&logo=twitter&message=Follow&color=1DA1F2)](https://twitter.com/@ShamanSharif) [![Instagram Badge](https://img.shields.io/static/v1?label=shaman.sharif&logo=instagram&message=Follow&color=E1306C)](https://instagram.com/shaman.sharif)
+[![LinkedIn Badge](https://img.shields.io/static/v1?label=@ShamanSharif&logo=linkedin&message=Follow&color=0077b5)](https://www.linkedin.com/in/shamansharif/) [![Twitter Badge](https://img.shields.io/static/v1?label=@ShamanSharif&logo=twitter&message=Follow&color=1DA1F2)](https://twitter.com/@ShamanSharif) [![Instagram Badge](https://img.shields.io/static/v1?label=shaman.sharif&logo=instagram&message=Follow&color=E1306C)](https://instagram.com/shaman.sharif)  
 or Email Me at __<a href="mailto:shaman.sharif@outlook.com">shaman.sharif@outlook.com</a>__
 
 I am a nice guy, just introduce yourself and we can be buddies 😉.
